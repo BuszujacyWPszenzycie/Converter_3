@@ -1,0 +1,74 @@
+@use 'colors' as *;
+
+@mixin link {
+	border: none;
+	background-color: $light-purple;
+	color: $white;
+	font-size: 2rem;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+@mixin btn {
+	border: none;
+	background-color: $icon-color;
+	font-size: 2rem;
+	border-radius: 100px;
+	width: 150px;
+	height: 50px;
+	color: $white;
+	font-family: inherit;
+	cursor: pointer;
+	transition: background-color 0.4s, color 0.4s;
+	&:hover {
+		background-color: $white;
+		color: $purple;
+	}
+}
+
+@mixin hoverUnderlineAnimationCenter {
+	position: relative;
+	display: inline;
+	text-decoration: none;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -2px;
+		width: 0px;
+		height: 2px;
+		background: $white;
+		transition: all 0.45s;
+	}
+
+	&:hover::after {
+		width: 100%;
+		left: 0;
+	}
+}
+
+// This animation is from right to left
+
+// @mixin hoverUnderlineAnimation {
+// 	display: inline-block;
+// 	position: relative;
+// 	color: $white;
+
+// 	&::after {
+// 		content: '';
+// 		position: absolute;
+// 		width: 70%;
+// 		transform: scaleX(0);
+// 		height: 2px;
+// 		bottom: 0;
+// 		left: 0 ;
+// 		background-color: $white;
+// 		transform-origin: bottom right;
+// 		transition: transform 0.25s ease-out;
+// 	}
+
+// 	&:hover::after {
+// 		transform: scaleX(1);
+// 		transform-origin: bottom left;
+// 	}
+// }
