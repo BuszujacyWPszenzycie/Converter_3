@@ -1,5 +1,6 @@
 @use 'colors' as *;
 @use 'mixin' as *;
+@use 'animations' as *;
 
 *,
 *::after,
@@ -63,8 +64,82 @@ body {
 	&__btn {
 		@include btn;
 		margin-right: 2rem;
-		// &:nth-of-type(1) {
-		// 	margin-right: 2rem;
-		// }
 	}
 }
+
+.main {
+	display: flex;
+	width: 100vw;
+	&__icon {
+		font-size: 30rem;
+		color: $white;
+		position: absolute;
+		animation: rotateAnimation 35s infinite;
+	}
+}
+
+.box {
+	margin: 2rem;
+	width: 50%;
+	height: 650px;
+
+	&__left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	&__right {
+	}
+}
+
+.modal {
+	&__instruction {
+		width: 60%;
+		height: 100%;
+		margin: 4rem;
+		border-radius: 16px;
+		// background-color: $white;
+	}
+}
+
+// To use
+
+// &-two {
+// 	font-size: 8rem;
+// 	left: 50%;
+// 	top: 30%;
+// 	animation: scaleAnimation 3s infinite;
+// 	animation-direction: alternate;
+// }
+
+// &-three {
+// 	font-size: 8rem;
+// 	left: 22%;
+// 	top: 10%;
+// 	animation: rotateAnimation 45s infinite;
+// }
+
+// &-four {
+// 	font-size: 8rem;
+// 	left: 30%;
+// 	top: 60%;
+// 	animation: scaleAnimation 3s infinite;
+// 	animation-direction: alternate;
+// }
+
+// &-five {
+// 	font-size: 8rem;
+// 	left: 80%;
+// 	top: 50%;
+// 	animation: rotateAnimation 45s infinite;
+// }
+
+// &-six {
+// 	font-size: 8rem;
+// 	left: 65%;
+// 	top: 80%;
+// 	animation: opacityAnimation 3s infinite;
+// 	animation-direction: alternate;
+// }
